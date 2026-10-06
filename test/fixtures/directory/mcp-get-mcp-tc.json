@@ -1,0 +1,243 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "mcp.tc: Search the mcp.tc directory from your assistant and get each MCP server's own URL or install command, with setup steps for each client.\nBy mcp.tc. Docs & Knowledge. Verified by mcp.tc: official server from mcp.tc.\nListing page: https://mcp.tc/i/mcp-tc\nServer URL (connect to this): https://mcp.tc/mcp\nAccess: No sign-in: add the server URL to any client that supports remote MCP servers.\nmcp.tc's own MCP server lets an assistant search this directory. search_servers finds listings by keyword, category or how they connect. get_server returns one listing in full: the server's own URL or install command, its tools, and setup steps for Claude Code, Claude Desktop, claude.ai, ChatGPT, Cursor, VS Code, Devin Desktop, Codex and Gemini CLI. list_categories lists the categories with their server counts. All three tools are read-only. The server runs at https://mcp.tc/mcp over…\nTools (3): search_servers, get_server, list_categories\nSetup (call get_server with client=<id> for the full steps):\n- Claude Code (claude-code): `claude mcp add --transport http mcp-tc https://mcp.tc/mcp`\n- Claude Desktop (claude-desktop): Open Customize → Connectors, click + Add, then Add custom connector, URL https://mcp.tc/mcp\n- claude.ai (claude-ai): Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=mcp.tc&connectorUrl=https%3A%2F%2Fmcp.tc%2Fmcp\n- ChatGPT (chatgpt): see client=chatgpt\n- Cursor (cursor): Add to Cursor: https://cursor.com/install-mcp?name=mcp-tc&config=eyJ1cmwiOiJodHRwczovL21jcC50Yy9tY3AifQ%3D%3D\n- VS Code (vscode): `code --add-mcp '{\"name\":\"mcp-tc\",\"type\":\"http\",\"url\":\"https://mcp.tc/mcp\"}'`\n- Devin Desktop (devin): see client=devin\n- Codex (codex): `codex mcp add mcp-tc --url https://mcp.tc/mcp`\n- Gemini CLI (gemini): `gemini mcp add --transport http mcp-tc https://mcp.tc/mcp`\n- Any client (json): see client=json"
+        }
+      ],
+      "structuredContent": {
+        "name": "mcp.tc",
+        "slug": "mcp-tc",
+        "link": "https://mcp.tc/i/mcp-tc",
+        "vendor": "mcp.tc",
+        "tagline": "Search the mcp.tc directory from your assistant and get each MCP server's own URL or install command, with setup steps for each client.",
+        "description": "mcp.tc's own MCP server lets an assistant search this directory. search_servers finds listings by keyword, category or how they connect. get_server returns one listing in full: the server's own URL or install command, its tools, and setup steps for Claude Code, Claude Desktop, claude.ai, ChatGPT, Cursor, VS Code, Devin Desktop, Codex and Gemini CLI. list_categories lists the categories with their server counts. All three tools are read-only. The server runs at https://mcp.tc/mcp over Streamable HTTP, needs no sign-in, and speaks protocol 2026-07-28 as well as the older initialize handshake (2025-03-26 to 2025-11-25). Each address can make 120 requests a minute.",
+        "category": "docs-knowledge",
+        "category_name": "Docs & Knowledge",
+        "kind": "remote",
+        "auth": "none",
+        "auth_note": "No sign-in: add the server URL to any client that supports remote MCP servers.",
+        "transport": "streamable-http",
+        "endpoint": "https://mcp.tc/mcp",
+        "install_command": null,
+        "package": null,
+        "env_vars": [],
+        "headers": [],
+        "tools_count": 3,
+        "tools": [
+          {
+            "name": "search_servers",
+            "summary": "Find MCP servers by keyword, category or sign-in type.",
+            "read_only": true,
+            "destructive": false
+          },
+          {
+            "name": "get_server",
+            "summary": "Get one server's own URL or install command, its tools and setup steps for each client.",
+            "read_only": true,
+            "destructive": false
+          },
+          {
+            "name": "list_categories",
+            "summary": "List the directory's categories with server counts.",
+            "read_only": true,
+            "destructive": false
+          }
+        ],
+        "capabilities": [
+          "Search MCP servers by keyword, category or sign-in type",
+          "Get a server's own URL or install command",
+          "Get setup steps for Claude, Cursor, VS Code and other clients",
+          "List the directory's categories with server counts"
+        ],
+        "example_prompts": [
+          "Find an MCP server for Postgres that runs locally.",
+          "Which project management MCP servers work without sign-in?",
+          "How do I add the Linear MCP server to Claude Code?",
+          "List the mcp.tc categories and how many servers each has."
+        ],
+        "homepage": "https://mcp.tc/",
+        "repository": null,
+        "docs": null,
+        "verified": true,
+        "verified_by": "Verified by mcp.tc: official server from mcp.tc",
+        "health": "ok",
+        "last_checked": "2026-10-05T22:58:00Z",
+        "server_version": "1.0.0",
+        "setup": [
+          {
+            "client": "claude-code",
+            "label": "Claude Code",
+            "quick": "`claude mcp add --transport http mcp-tc https://mcp.tc/mcp`",
+            "steps": [
+              "Run this in a terminal, in your project folder:",
+              "```bash\nclaude mcp add --transport http mcp-tc https://mcp.tc/mcp\n```",
+              "Start Claude Code and type `/mcp`. **mcp-tc** should show as connected."
+            ],
+            "code": "claude mcp add --transport http mcp-tc https://mcp.tc/mcp",
+            "link": null,
+            "note": "Add `--scope user` to make it available in every project, not just this one."
+          },
+          {
+            "client": "claude-desktop",
+            "label": "Claude Desktop",
+            "quick": "Open Customize → Connectors, click + Add, then Add custom connector, URL https://mcp.tc/mcp",
+            "steps": [
+              "Open **Customize → Connectors**, click **+ Add**, then **Add custom connector**.",
+              "Name it **mcp.tc** and paste this URL:",
+              "https://mcp.tc/mcp",
+              "Click **Add**. Its tools appear in the chat’s tools menu."
+            ],
+            "code": "https://mcp.tc/mcp",
+            "link": null,
+            "note": "Claude Desktop’s JSON config file only starts local servers. Remote servers go through Connectors, and connectors you add on claude.ai show up here too."
+          },
+          {
+            "client": "claude-ai",
+            "label": "claude.ai",
+            "quick": "Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=mcp.tc&connectorUrl=https%3A%2F%2Fmcp.tc%2Fmcp",
+            "steps": [
+              "Open the connector form on claude.ai. This button fills in the name and URL for you:",
+              "Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=mcp.tc&connectorUrl=https%3A%2F%2Fmcp.tc%2Fmcp",
+              "Check that the URL reads `https://mcp.tc/mcp` and click **Add**.",
+              "Turn it on in a chat from the tools menu."
+            ],
+            "code": null,
+            "link": "https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=mcp.tc&connectorUrl=https%3A%2F%2Fmcp.tc%2Fmcp",
+            "note": "Free plans allow one custom connector. On Team and Enterprise plans an owner adds it under **Organization settings → Connectors**."
+          },
+          {
+            "client": "chatgpt",
+            "label": "ChatGPT",
+            "quick": null,
+            "steps": [
+              "On chatgpt.com, open **Settings → Security and login** and turn on **Developer mode**.",
+              "Go to `chatgpt.com/plugins` and click **+** to create an app for a remote MCP server.",
+              "Paste `https://mcp.tc/mcp` as the server URL and choose **No authentication**."
+            ],
+            "code": null,
+            "link": null,
+            "note": "Developer mode is available on the web for Plus, Pro, Business, Enterprise and Education accounts."
+          },
+          {
+            "client": "cursor",
+            "label": "Cursor",
+            "quick": "Add to Cursor: https://cursor.com/install-mcp?name=mcp-tc&config=eyJ1cmwiOiJodHRwczovL21jcC50Yy9tY3AifQ%3D%3D",
+            "steps": [
+              "Add to Cursor: https://cursor.com/install-mcp?name=mcp-tc&config=eyJ1cmwiOiJodHRwczovL21jcC50Yy9tY3AifQ%3D%3D",
+              "Or add it by hand to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (this project):",
+              "```json\n{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"url\": \"https://mcp.tc/mcp\"\n    }\n  }\n}\n```"
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"url\": \"https://mcp.tc/mcp\"\n    }\n  }\n}",
+            "link": "https://cursor.com/install-mcp?name=mcp-tc&config=eyJ1cmwiOiJodHRwczovL21jcC50Yy9tY3AifQ%3D%3D",
+            "note": null
+          },
+          {
+            "client": "vscode",
+            "label": "VS Code",
+            "quick": "`code --add-mcp '{\"name\":\"mcp-tc\",\"type\":\"http\",\"url\":\"https://mcp.tc/mcp\"}'`",
+            "steps": [
+              "Install in VS Code: https://vscode.dev/redirect/mcp/install?name=mcp-tc&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.tc%2Fmcp%22%7D",
+              "Or from a terminal:",
+              "```bash\ncode --add-mcp '{\"name\":\"mcp-tc\",\"type\":\"http\",\"url\":\"https://mcp.tc/mcp\"}'\n```",
+              "Or commit it to the repo in `.vscode/mcp.json`:",
+              "```json\n{\n  \"servers\": {\n    \"mcp-tc\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.tc/mcp\"\n    }\n  }\n}\n```"
+            ],
+            "code": "code --add-mcp '{\"name\":\"mcp-tc\",\"type\":\"http\",\"url\":\"https://mcp.tc/mcp\"}'",
+            "link": "https://vscode.dev/redirect/mcp/install?name=mcp-tc&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.tc%2Fmcp%22%7D",
+            "note": null
+          },
+          {
+            "client": "devin",
+            "label": "Devin Desktop",
+            "quick": null,
+            "steps": [
+              "Add it to `~/.config/devin/mcp_config.json` (macOS and Linux) or `%APPDATA%\\devin\\mcp_config.json` (Windows):",
+              "```json\n{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"serverUrl\": \"https://mcp.tc/mcp\"\n    }\n  }\n}\n```",
+              "Refresh the MCP server list in Cascade."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"serverUrl\": \"https://mcp.tc/mcp\"\n    }\n  }\n}",
+            "link": null,
+            "note": "Devin Desktop is the new name for Windsurf. It reads `serverUrl` (or `url`) for remote servers."
+          },
+          {
+            "client": "codex",
+            "label": "Codex",
+            "quick": "`codex mcp add mcp-tc --url https://mcp.tc/mcp`",
+            "steps": [
+              "```bash\ncodex mcp add mcp-tc --url https://mcp.tc/mcp\n```",
+              "Or edit `~/.codex/config.toml` directly:",
+              "```toml\n[mcp_servers.mcp-tc]\nurl = \"https://mcp.tc/mcp\"\n```"
+            ],
+            "code": "codex mcp add mcp-tc --url https://mcp.tc/mcp",
+            "link": null,
+            "note": null
+          },
+          {
+            "client": "gemini",
+            "label": "Gemini CLI",
+            "quick": "`gemini mcp add --transport http mcp-tc https://mcp.tc/mcp`",
+            "steps": [
+              "```bash\ngemini mcp add --transport http mcp-tc https://mcp.tc/mcp\n```"
+            ],
+            "code": "gemini mcp add --transport http mcp-tc https://mcp.tc/mcp",
+            "link": null,
+            "note": "This adds it to the current project. Add `-s user` to use it everywhere."
+          },
+          {
+            "client": "json",
+            "label": "Any client",
+            "quick": null,
+            "steps": [
+              "Most clients accept this shape. Some name the URL field differently: `serverUrl` in Devin Desktop, `httpUrl` in Gemini CLI’s settings file.",
+              "```json\n{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.tc/mcp\"\n    }\n  }\n}\n```",
+              "Zed puts servers under `context_servers` in its settings. Cline needs `\"type\": \"streamableHttp\"`, or it assumes SSE.",
+              "Client only starts local servers? Bridge it with `npx -y mcp-remote https://mcp.tc/mcp`."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"mcp-tc\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.tc/mcp\"\n    }\n  }\n}",
+            "link": null,
+            "note": null
+          }
+        ]
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.0.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

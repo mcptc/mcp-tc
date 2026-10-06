@@ -1,0 +1,7 @@
+node_modules/
+.test-ledger.json
+.claude/
+*.tgz
+.npmrc
+coverage/
+.internal-words

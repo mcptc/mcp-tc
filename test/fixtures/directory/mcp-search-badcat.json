@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "error": {
+      "code": -32602,
+      "message": "Unknown category \"nope-cat\". Use a slug from list_categories, e.g. \"databases\" or \"developer-tools\"."
+    }
+  }
+}

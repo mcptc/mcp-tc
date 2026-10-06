@@ -1,0 +1,8 @@
+{
+  "note": "Redirects of the scan tests' own fake /directory: address sent -> listing path. Anything else is not listed.",
+  "redirects": {
+    "https://mcp.deepwiki.com/mcp": "/i/deepwiki",
+    "https://mcp.notion.com/mcp": "/i/notion",
+    "@modelcontextprotocol/server-memory": "/i/memory"
+  }
+}

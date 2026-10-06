@@ -1,0 +1,110 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "9 listings match \"github\", showing the first 5. Call get_server with a slug for the endpoint URL or install command and setup steps.\n- DeepWiki (Cognition): Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation. [slug deepwiki; remote, no sign-in; verified] https://mcp.tc/i/deepwiki\n- GitHub: Work with GitHub repos, issues, pull requests, Actions workflows and code search from your AI assistant. [slug github; remote, OAuth sign-in; verified] https://mcp.tc/i/github\n- GitMCP: Read documentation and search code of any GitHub repository, so answers come from the current source instead of model memory. [slug gitmcp; remote, no sign-in] https://mcp.tc/i/gitmcp\n- Grep by Vercel (Vercel): Search real code across a million public GitHub repositories with literal and regex patterns. [slug grep; remote, no sign-in; verified] https://mcp.tc/i/grep\n- Awesome Copilot (Microsoft): Retrieve GitHub Copilot customization files from the Awesome Copilot repository, such as prompts, instructions and chat modes. [slug awesome-copilot; runs locally] https://mcp.tc/i/awesome-copilot\nMore: https://mcp.tc/directory?q=github&sort=popular"
+        }
+      ],
+      "structuredContent": {
+        "total": 9,
+        "count": 5,
+        "results": [
+          {
+            "name": "DeepWiki",
+            "slug": "deepwiki",
+            "link": "https://mcp.tc/i/deepwiki",
+            "vendor": "Cognition",
+            "tagline": "Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation.",
+            "category": "docs-knowledge",
+            "auth": "none",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "GitHub",
+            "slug": "github",
+            "link": "https://mcp.tc/i/github",
+            "vendor": "GitHub",
+            "tagline": "Work with GitHub repos, issues, pull requests, Actions workflows and code search from your AI assistant.",
+            "category": "developer-tools",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "GitMCP",
+            "slug": "gitmcp",
+            "link": "https://mcp.tc/i/gitmcp",
+            "vendor": "GitMCP",
+            "tagline": "Read documentation and search code of any GitHub repository, so answers come from the current source instead of model memory.",
+            "category": "docs-knowledge",
+            "auth": "none",
+            "kind": "remote",
+            "verified": false
+          },
+          {
+            "name": "Grep by Vercel",
+            "slug": "grep",
+            "link": "https://mcp.tc/i/grep",
+            "vendor": "Vercel",
+            "tagline": "Search real code across a million public GitHub repositories with literal and regex patterns.",
+            "category": "developer-tools",
+            "auth": "none",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "Awesome Copilot",
+            "slug": "awesome-copilot",
+            "link": "https://mcp.tc/i/awesome-copilot",
+            "vendor": "Microsoft",
+            "tagline": "Retrieve GitHub Copilot customization files from the Awesome Copilot repository, such as prompts, instructions and chat modes.",
+            "category": "developer-tools",
+            "auth": "none",
+            "kind": "local",
+            "verified": false
+          }
+        ],
+        "more_url": "https://mcp.tc/directory?q=github&sort=popular"
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.0.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

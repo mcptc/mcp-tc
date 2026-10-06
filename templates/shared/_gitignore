@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+.DS_Store
+{{#workers}}
+.wrangler/
+.dev.vars
+.dev.vars.*
+{{/workers}}

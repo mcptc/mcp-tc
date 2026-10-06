@@ -1,0 +1,193 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "20 categories (slug: name, servers):\n- developer-tools: Developer Tools (97)\n- docs-knowledge: Docs & Knowledge (50)\n- search-web: Search & Web Data (32)\n- browser-automation: Browser Automation (12)\n- databases: Databases & Backend (37)\n- cloud-devops: Cloud & DevOps (49)\n- observability: Observability & Incidents (25)\n- productivity: Productivity & Projects (45)\n- communication: Communication & Meetings (18)\n- design: Design, Websites & CMS (42)\n- finance-payments: Finance & Payments (45)\n- crm-sales: CRM, Sales & Support (17)\n- marketing-seo: Marketing & SEO (42)\n- analytics: Data & Analytics (25)\n- ai-ml: AI & Machine Learning (38)\n- security: Security & Compliance (27)\n- automation: Automation & Integrations (8)\n- travel-maps: Travel & Maps (13)\n- ecommerce: E-commerce (17)\n- utilities: Utilities (8)\nPass a slug as the category of search_servers."
+        }
+      ],
+      "structuredContent": {
+        "total_servers": 647,
+        "categories": [
+          {
+            "slug": "developer-tools",
+            "name": "Developer Tools",
+            "count": 97,
+            "description": "MCP servers for everyday coding work: repositories, code search, issues, API tooling and your local files, reachable from your AI assistant.",
+            "link": "https://mcp.tc/c/developer-tools"
+          },
+          {
+            "slug": "docs-knowledge",
+            "name": "Docs & Knowledge",
+            "count": 50,
+            "description": "Servers that put current documentation and knowledge bases into the model's context, so answers come from the real source instead of memory.",
+            "link": "https://mcp.tc/c/docs-knowledge"
+          },
+          {
+            "slug": "search-web",
+            "name": "Search & Web Data",
+            "count": 32,
+            "description": "Web search, crawling, scraping and extraction servers that let an assistant read the live web.",
+            "link": "https://mcp.tc/c/search-web"
+          },
+          {
+            "slug": "browser-automation",
+            "name": "Browser Automation",
+            "count": 12,
+            "description": "Drive a real browser from your assistant: navigate, click, fill forms, take screenshots and run end-to-end checks.",
+            "link": "https://mcp.tc/c/browser-automation"
+          },
+          {
+            "slug": "databases",
+            "name": "Databases & Backend",
+            "count": 37,
+            "description": "Query and manage SQL and NoSQL databases, backend platforms and data warehouses in plain language.",
+            "link": "https://mcp.tc/c/databases"
+          },
+          {
+            "slug": "cloud-devops",
+            "name": "Cloud & DevOps",
+            "count": 49,
+            "description": "Deploy and operate infrastructure: hosting platforms, containers, Kubernetes, DNS and CI/CD.",
+            "link": "https://mcp.tc/c/cloud-devops"
+          },
+          {
+            "slug": "observability",
+            "name": "Observability & Incidents",
+            "count": 25,
+            "description": "Errors, logs, traces and on-call. Let the assistant investigate an incident with real production data.",
+            "link": "https://mcp.tc/c/observability"
+          },
+          {
+            "slug": "productivity",
+            "name": "Productivity & Projects",
+            "count": 45,
+            "description": "Docs, project trackers, tasks and files: create tickets, update pages and search your workspace.",
+            "link": "https://mcp.tc/c/productivity"
+          },
+          {
+            "slug": "communication",
+            "name": "Communication & Meetings",
+            "count": 18,
+            "description": "Chat, email, meetings and transcripts your assistant can read from and post to.",
+            "link": "https://mcp.tc/c/communication"
+          },
+          {
+            "slug": "design",
+            "name": "Design, Websites & CMS",
+            "count": 42,
+            "description": "Design files, diagrams, site builders and content management systems, from Figma frames to published pages.",
+            "link": "https://mcp.tc/c/design"
+          },
+          {
+            "slug": "finance-payments",
+            "name": "Finance & Payments",
+            "count": 45,
+            "description": "Payments, invoicing, spend management and banking data exposed as MCP tools.",
+            "link": "https://mcp.tc/c/finance-payments"
+          },
+          {
+            "slug": "crm-sales",
+            "name": "CRM, Sales & Support",
+            "count": 17,
+            "description": "CRMs, prospecting and support desks: look up accounts, log activity and answer tickets.",
+            "link": "https://mcp.tc/c/crm-sales"
+          },
+          {
+            "slug": "marketing-seo",
+            "name": "Marketing & SEO",
+            "count": 42,
+            "description": "Email and SMS marketing, SEO data and ad platforms for growth teams.",
+            "link": "https://mcp.tc/c/marketing-seo"
+          },
+          {
+            "slug": "analytics",
+            "name": "Data & Analytics",
+            "count": 25,
+            "description": "Product analytics and BI tools you can question in natural language.",
+            "link": "https://mcp.tc/c/analytics"
+          },
+          {
+            "slug": "ai-ml",
+            "name": "AI & Machine Learning",
+            "count": 38,
+            "description": "Model hubs, datasets, memory and reasoning helpers for AI work.",
+            "link": "https://mcp.tc/c/ai-ml"
+          },
+          {
+            "slug": "security",
+            "name": "Security & Compliance",
+            "count": 27,
+            "description": "Code scanning, dependency checks, secrets and compliance tooling.",
+            "link": "https://mcp.tc/c/security"
+          },
+          {
+            "slug": "automation",
+            "name": "Automation & Integrations",
+            "count": 8,
+            "description": "Workflow platforms that connect hundreds of apps through a single MCP endpoint.",
+            "link": "https://mcp.tc/c/automation"
+          },
+          {
+            "slug": "travel-maps",
+            "name": "Travel & Maps",
+            "count": 13,
+            "description": "Flights, hotels, places and routes: plan trips and answer location questions.",
+            "link": "https://mcp.tc/c/travel-maps"
+          },
+          {
+            "slug": "ecommerce",
+            "name": "E-commerce",
+            "count": 17,
+            "description": "Storefronts, catalogs, orders and fulfilment for online shops.",
+            "link": "https://mcp.tc/c/ecommerce"
+          },
+          {
+            "slug": "utilities",
+            "name": "Utilities",
+            "count": 8,
+            "description": "Small, focused servers: time, maths, conversions, test data and other handy helpers.",
+            "link": "https://mcp.tc/c/utilities"
+          }
+        ]
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.0.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    // Cloudflare Workers settings: https://developers.cloudflare.com/workers/wrangler/configuration/
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "{{workerName}}",
+    "main": "src/index.ts",
+    "compatibility_date": "{{compatibilityDate}}",
+    // npm run dev serves the worker on http://127.0.0.1:8787/mcp.
+    "dev": { "ip": "127.0.0.1", "port": 8787 },
+    "vars": {
+        // The worker's hostnames, comma separated. Add your workers.dev hostname or custom domain before you deploy,
+        // for example "{{workerName}}.your-subdomain.workers.dev". localhost and 127.0.0.1 always work.
+        "ALLOWED_HOSTS": "",
+        // Hostnames of web pages that may call the worker from a browser (they get CORS headers). Empty: the same
+        // as ALLOWED_HOSTS.
+        "ALLOWED_ORIGINS": ""{{#bearer}},
+        // The public URL of the MCP endpoint: tokens must be issued for exactly this URL. Set it before you deploy,
+        // for example "https://{{workerName}}.your-subdomain.workers.dev/mcp": until then the deployed worker answers
+        // 500. Empty, `npm run dev` uses http://127.0.0.1:8787/mcp.
+        "MCP_SERVER_URL": "",
+        // Your authorization server (identity provider), as its issuer URL.
+        "OAUTH_ISSUER": "https://auth.example.com"{{/bearer}}
+    }
+}

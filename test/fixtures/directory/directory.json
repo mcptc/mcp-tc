@@ -1,0 +1,8 @@
+{
+  "recorded": "2026-10-06",
+  "note": "GET /directory?q=<address> with redirect: manual. A listed address answers 303 to its listing; an unknown URL answers 303 to the suggest form.",
+  "redirects": {
+    "https://mcp.deepwiki.com/mcp": "/i/deepwiki",
+    "https://example.com/mcp": "/submit?url=https%3A%2F%2Fexample.com%2Fmcp"
+  }
+}

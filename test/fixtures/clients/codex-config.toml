@@ -1,0 +1,22 @@
+model = "some-model"
+
+# MCP servers
+[mcp_servers.docs]
+url = "https://mcp.deepwiki.com/mcp"
+bearer_token_env_var = "FAKE_ENV_NAME"
+
+[mcp_servers.fs]
+command = "npx"
+args = [
+  "-y",
+  "@modelcontextprotocol/server-filesystem", # a comment
+  "/home/someone/Documents",
+]
+env = { FS_TOKEN = "FAKE-toml-token-4444444444" }
+
+[mcp_servers."docker-fetch"]
+command = 'docker'
+args = ["run", "-i", "--rm", "-e", "API_KEY=FAKE-docker-key-3333333333", "docker.io/mcp/fetch:latest"]
+
+[mcp_servers.docs.tools]
+enabled = true

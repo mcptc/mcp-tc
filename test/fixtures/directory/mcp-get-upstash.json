@@ -1,0 +1,222 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Upstash: Manage Upstash Redis, QStash, Workflow and Box resources and debug them from your agent through the Upstash Developer API.\nBy Upstash. Databases & Backend.\nListing page: https://mcp.tc/i/upstash\nInstall command: npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY\nAccess: Runs on your computer, started by your client. Needs an API key from Upstash in an environment variable.\nEnvironment: UPSTASH_EMAIL (required), UPSTASH_API_KEY (required), UPSTASH_BOX_API_KEY\nConnects your agent to the Upstash Developer API so it can manage and debug Upstash resources across Redis, QStash, Workflow and Upstash Box. It can read and query your account, including Redis databases, QStash logs, schedules and Workflow logs, and it can make changes such as creating databases or deleting backups. A free Redis database can also be started without an account through the redis_database_start_free tool. It runs locally over stdio with npx. You need your Upstash account email…\nHistory (new npm versions checked every 3 hours, tools not read): no change recorded yet. https://mcp.tc/i/upstash#history\nSetup (call get_server with client=<id> for the full steps):\n- Claude Code (claude-code): `claude mcp add --transport stdio upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`\n- Claude Desktop (claude-desktop): see client=claude-desktop\n- Cursor (cursor): Add to Cursor: https://cursor.com/install-mcp?name=upstash&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB1cHN0YXNoL21jcC1zZXJ2ZXJAbGF0ZXN0IiwiLS1lbWFpbCIsIllPVVJfRU1BSUwiLCItLWFwaS1rZXkiLCJZT1VSX0FQSV9LRVkiXSwiZW52Ijp7IlVQU1RBU0hfRU1BSUwiOiI8WU9VUl9VUFNUQVNIX0VNQUlMPiIsIlVQU1RBU0hfQVBJX0tFWSI6IjxZT1VSX1VQU1RBU0hfQVBJX0tFWT4iLCJVUFNUQVNIX0JPWF9BUElfS0VZIjoiPFlPVVJfVVBTVEFTSF9CT1hfQVBJX0tFWT4ifX0%3D\n- VS Code (vscode): see client=vscode\n- Devin Desktop (devin): see client=devin\n- Codex (codex): `codex mcp add upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`\n- Gemini CLI (gemini): `gemini mcp add -e \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" -e \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" -e \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" upstash npx -- -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`\n- Any client (json): see client=json"
+        }
+      ],
+      "structuredContent": {
+        "name": "Upstash",
+        "slug": "upstash",
+        "link": "https://mcp.tc/i/upstash",
+        "vendor": "Upstash",
+        "tagline": "Manage Upstash Redis, QStash, Workflow and Box resources and debug them from your agent through the Upstash Developer API.",
+        "description": "Connects your agent to the Upstash Developer API so it can manage and debug Upstash resources across Redis, QStash, Workflow and Upstash Box. It can read and query your account, including Redis databases, QStash logs, schedules and Workflow logs, and it can make changes such as creating databases or deleting backups. A free Redis database can also be started without an account through the redis_database_start_free tool. It runs locally over stdio with npx. You need your Upstash account email and a Developer API key from the Upstash console. Readonly API keys are supported: the server then disables every tool that modifies state. An optional Box API key enables Box tools.",
+        "category": "databases",
+        "category_name": "Databases & Backend",
+        "kind": "local",
+        "auth": "api_key",
+        "auth_note": "Runs on your computer, started by your client. Needs an API key from Upstash in an environment variable.",
+        "transport": "stdio",
+        "endpoint": null,
+        "install_command": "npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY",
+        "package": {
+          "registry": "npm",
+          "identifier": "@upstash/mcp-server"
+        },
+        "env_vars": [
+          {
+            "name": "UPSTASH_EMAIL",
+            "required": true,
+            "secret": false,
+            "description": "Email address of your Upstash account."
+          },
+          {
+            "name": "UPSTASH_API_KEY",
+            "required": true,
+            "secret": true,
+            "description": "Upstash Developer API key (create one at https://console.upstash.com/account/api)."
+          },
+          {
+            "name": "UPSTASH_BOX_API_KEY",
+            "required": false,
+            "secret": true,
+            "description": "Upstash Box API key for Box-related tools."
+          }
+        ],
+        "headers": [],
+        "tools_count": 0,
+        "tools": [],
+        "capabilities": [
+          "Manage Upstash Redis databases and backups",
+          "Inspect QStash logs and schedules",
+          "Read Workflow logs and retry workflows",
+          "Work with Upstash Box resources",
+          "Start a free temporary Redis database without signup",
+          "Run in read-only mode with a readonly API key"
+        ],
+        "example_prompts": [
+          "List my Upstash Redis databases and show their usage stats.",
+          "Create a new Upstash Redis database in eu-west-1.",
+          "Show recent QStash logs for failed messages.",
+          "Start a free temporary Redis database for testing."
+        ],
+        "homepage": null,
+        "repository": "https://github.com/upstash/mcp-server",
+        "docs": null,
+        "verified": false,
+        "verified_by": null,
+        "health": "unknown",
+        "last_checked": "2026-10-03T20:37:42Z",
+        "server_version": "0.2.7",
+        "history_url": "https://mcp.tc/i/upstash#history",
+        "history_feed": "https://mcp.tc/i/upstash/history.xml",
+        "tracking": "version",
+        "tools_checked": null,
+        "last_changed": null,
+        "recent_changes": [],
+        "setup": [
+          {
+            "client": "claude-code",
+            "label": "Claude Code",
+            "quick": "`claude mcp add --transport stdio upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`",
+            "steps": [
+              "Run this in a terminal, in your project folder:",
+              "```bash\nclaude mcp add --transport stdio upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY\n```",
+              "Start Claude Code and type `/mcp`. **upstash** should show as connected."
+            ],
+            "code": "claude mcp add --transport stdio upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY",
+            "link": null,
+            "note": "Add `--scope user` to make it available in every project. Replace the placeholders with your own values."
+          },
+          {
+            "client": "claude-desktop",
+            "label": "Claude Desktop",
+            "quick": null,
+            "steps": [
+              "Open **Settings → Developer → Edit Config**. It opens `claude_desktop_config.json`. Add:",
+              "```json\n{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}\n```",
+              "Save the file and restart Claude Desktop. Replace the placeholders with your own values."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}",
+            "link": null,
+            "note": "Needs Node.js on your computer. The file lives in `~/Library/Application Support/Claude/` on macOS and `%APPDATA%\\Claude\\` on Windows."
+          },
+          {
+            "client": "cursor",
+            "label": "Cursor",
+            "quick": "Add to Cursor: https://cursor.com/install-mcp?name=upstash&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB1cHN0YXNoL21jcC1zZXJ2ZXJAbGF0ZXN0IiwiLS1lbWFpbCIsIllPVVJfRU1BSUwiLCItLWFwaS1rZXkiLCJZT1VSX0FQSV9LRVkiXSwiZW52Ijp7IlVQU1RBU0hfRU1BSUwiOiI8WU9VUl9VUFNUQVNIX0VNQUlMPiIsIlVQU1RBU0hfQVBJX0tFWSI6IjxZT1VSX1VQU1RBU0hfQVBJX0tFWT4iLCJVUFNUQVNIX0JPWF9BUElfS0VZIjoiPFlPVVJfVVBTVEFTSF9CT1hfQVBJX0tFWT4ifX0%3D",
+            "steps": [
+              "Add to Cursor: https://cursor.com/install-mcp?name=upstash&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB1cHN0YXNoL21jcC1zZXJ2ZXJAbGF0ZXN0IiwiLS1lbWFpbCIsIllPVVJfRU1BSUwiLCItLWFwaS1rZXkiLCJZT1VSX0FQSV9LRVkiXSwiZW52Ijp7IlVQU1RBU0hfRU1BSUwiOiI8WU9VUl9VUFNUQVNIX0VNQUlMPiIsIlVQU1RBU0hfQVBJX0tFWSI6IjxZT1VSX1VQU1RBU0hfQVBJX0tFWT4iLCJVUFNUQVNIX0JPWF9BUElfS0VZIjoiPFlPVVJfVVBTVEFTSF9CT1hfQVBJX0tFWT4ifX0%3D",
+              "Or add it by hand to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (this project):",
+              "```json\n{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}\n```"
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}",
+            "link": "https://cursor.com/install-mcp?name=upstash&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB1cHN0YXNoL21jcC1zZXJ2ZXJAbGF0ZXN0IiwiLS1lbWFpbCIsIllPVVJfRU1BSUwiLCItLWFwaS1rZXkiLCJZT1VSX0FQSV9LRVkiXSwiZW52Ijp7IlVQU1RBU0hfRU1BSUwiOiI8WU9VUl9VUFNUQVNIX0VNQUlMPiIsIlVQU1RBU0hfQVBJX0tFWSI6IjxZT1VSX1VQU1RBU0hfQVBJX0tFWT4iLCJVUFNUQVNIX0JPWF9BUElfS0VZIjoiPFlPVVJfVVBTVEFTSF9CT1hfQVBJX0tFWT4ifX0%3D",
+            "note": "Needs Node.js on your computer. Replace the placeholders with your own values."
+          },
+          {
+            "client": "vscode",
+            "label": "VS Code",
+            "quick": null,
+            "steps": [
+              "Add it to `.vscode/mcp.json`. VS Code asks for the secret the first time and stores it securely:",
+              "```json\n{\n  \"servers\": {\n    \"upstash\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"${input:upstash-api-key}\",\n        \"UPSTASH_BOX_API_KEY\": \"${input:upstash-box-api-key}\"\n      }\n    }\n  },\n  \"inputs\": [\n    {\n      \"type\": \"promptString\",\n      \"id\": \"upstash-api-key\",\n      \"description\": \"UPSTASH_API_KEY\",\n      \"password\": true\n    },\n    {\n      \"type\": \"promptString\",\n      \"id\": \"upstash-box-api-key\",\n      \"description\": \"UPSTASH_BOX_API_KEY\",\n      \"password\": true\n    }\n  ]\n}\n```"
+            ],
+            "code": "{\n  \"servers\": {\n    \"upstash\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"${input:upstash-api-key}\",\n        \"UPSTASH_BOX_API_KEY\": \"${input:upstash-box-api-key}\"\n      }\n    }\n  },\n  \"inputs\": [\n    {\n      \"type\": \"promptString\",\n      \"id\": \"upstash-api-key\",\n      \"description\": \"UPSTASH_API_KEY\",\n      \"password\": true\n    },\n    {\n      \"type\": \"promptString\",\n      \"id\": \"upstash-box-api-key\",\n      \"description\": \"UPSTASH_BOX_API_KEY\",\n      \"password\": true\n    }\n  ]\n}",
+            "link": null,
+            "note": "Needs Node.js on your computer."
+          },
+          {
+            "client": "devin",
+            "label": "Devin Desktop",
+            "quick": null,
+            "steps": [
+              "Add it to `~/.config/devin/mcp_config.json` (macOS and Linux) or `%APPDATA%\\devin\\mcp_config.json` (Windows):",
+              "```json\n{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}\n```",
+              "Refresh the MCP server list in Cascade. Replace the placeholders with your own values."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}",
+            "link": null,
+            "note": "Devin Desktop is the new name for Windsurf."
+          },
+          {
+            "client": "codex",
+            "label": "Codex",
+            "quick": "`codex mcp add upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`",
+            "steps": [
+              "```bash\ncodex mcp add upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY\n```",
+              "Or edit `~/.codex/config.toml` directly:",
+              "```toml\n[mcp_servers.upstash]\ncommand = \"npx\"\nargs = [\"-y\", \"@upstash/mcp-server@latest\", \"--email\", \"YOUR_EMAIL\", \"--api-key\", \"YOUR_API_KEY\"]\nenv = { UPSTASH_EMAIL = \"<YOUR_UPSTASH_EMAIL>\", UPSTASH_API_KEY = \"<YOUR_UPSTASH_API_KEY>\", UPSTASH_BOX_API_KEY = \"<YOUR_UPSTASH_BOX_API_KEY>\" }\n```"
+            ],
+            "code": "codex mcp add upstash --env \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" --env \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" --env \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" -- npx -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY",
+            "link": null,
+            "note": "Needs Node.js on your computer. Replace the placeholders with your own values."
+          },
+          {
+            "client": "gemini",
+            "label": "Gemini CLI",
+            "quick": "`gemini mcp add -e \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" -e \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" -e \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" upstash npx -- -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY`",
+            "steps": [
+              "```bash\ngemini mcp add -e \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" -e \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" -e \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" upstash npx -- -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY\n```"
+            ],
+            "code": "gemini mcp add -e \"UPSTASH_EMAIL=<YOUR_UPSTASH_EMAIL>\" -e \"UPSTASH_API_KEY=<YOUR_UPSTASH_API_KEY>\" -e \"UPSTASH_BOX_API_KEY=<YOUR_UPSTASH_BOX_API_KEY>\" upstash npx -- -y @upstash/mcp-server@latest --email YOUR_EMAIL --api-key YOUR_API_KEY",
+            "link": null,
+            "note": "This adds it to the current project. Add `-s user` to use it everywhere."
+          },
+          {
+            "client": "json",
+            "label": "Any client",
+            "quick": null,
+            "steps": [
+              "Most clients that start local servers accept this shape:",
+              "```json\n{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}\n```",
+              "Zed puts servers under `context_servers` in its settings, with the same `command`, `args` and `env` fields."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"upstash\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/mcp-server@latest\",\n        \"--email\",\n        \"YOUR_EMAIL\",\n        \"--api-key\",\n        \"YOUR_API_KEY\"\n      ],\n      \"env\": {\n        \"UPSTASH_EMAIL\": \"<YOUR_UPSTASH_EMAIL>\",\n        \"UPSTASH_API_KEY\": \"<YOUR_UPSTASH_API_KEY>\",\n        \"UPSTASH_BOX_API_KEY\": \"<YOUR_UPSTASH_BOX_API_KEY>\"\n      }\n    }\n  }\n}",
+            "link": null,
+            "note": "Needs Node.js on your computer. Replace the placeholders with your own values."
+          }
+        ]
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.1.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

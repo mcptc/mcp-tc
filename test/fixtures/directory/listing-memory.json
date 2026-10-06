@@ -1,0 +1,70 @@
+{
+  "status": 200,
+  "body": {
+    "slug": "memory",
+    "name": "Memory",
+    "vendor": "MCP reference servers",
+    "tagline": "Store and recall persistent memory across sessions using a local knowledge graph.",
+    "description": "Memory is a reference MCP server that gives an assistant a knowledge-graph-based persistent memory. Information is kept between conversations so the assistant can recall it later.\n\nIt runs locally over stdio with npx (npx -y @modelcontextprotocol/server-memory) and is configured in an MCP client such as Claude Desktop. No API key is listed. The maintainers describe the repository's servers as reference implementations for learning, not production-ready solutions.",
+    "link": "https://mcp.tc/i/memory",
+    "lang": "en",
+    "text_lang": "en",
+    "category": "ai-ml",
+    "category_name": "AI & Machine Learning",
+    "kind": "local",
+    "transport": "stdio",
+    "auth": "none",
+    "access": {
+      "group": "local",
+      "label": "Local",
+      "text": "Runs locally",
+      "note": "Runs on your machine: its page has the install command"
+    },
+    "endpoint": null,
+    "install_command": "npx -y @modelcontextprotocol/server-memory",
+    "package": {
+      "registry": "npm",
+      "identifier": "@modelcontextprotocol/server-memory"
+    },
+    "relay": false,
+    "verified": true,
+    "verified_by": "Verified by mcp.tc: official server from MCP reference servers",
+    "icon": "https://mcp.tc/media/icons/memory-0e174415.webp",
+    "tools_count": 0,
+    "tools": [],
+    "add": [
+      {
+        "client": "claude-code",
+        "label": "Claude Code",
+        "kind": "copy",
+        "value": "claude mcp add --transport stdio memory -- npx -y @modelcontextprotocol/server-memory"
+      },
+      {
+        "client": "cursor",
+        "label": "Cursor",
+        "kind": "link",
+        "value": "https://cursor.com/install-mcp?name=memory&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBtb2RlbGNvbnRleHRwcm90b2NvbC9zZXJ2ZXItbWVtb3J5Il19"
+      },
+      {
+        "client": "vscode",
+        "label": "VS Code",
+        "kind": "link",
+        "value": "https://vscode.dev/redirect/mcp/install?name=memory&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40modelcontextprotocol%2Fserver-memory%22%5D%7D"
+      }
+    ],
+    "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "docs": null,
+    "health": "unknown",
+    "last_checked": "2026-10-03T15:02:58Z",
+    "listed": "2026-10-03T15:02:59Z",
+    "updated": "2026-10-03T23:54:43Z",
+    "embeds": {
+      "badge": "https://mcp.tc/i/memory/badge.svg",
+      "widget": "https://mcp.tc/w/memory.js",
+      "iframe": "https://mcp.tc/embed/memory",
+      "markdown": "https://mcp.tc/i/memory.md"
+    },
+    "format": "https://mcp.tc/embed#json"
+  }
+}

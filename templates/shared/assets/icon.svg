@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="{{title}}">
+  <title>{{title}}</title>
+  <!-- Placeholder icon made by mcp-tc create. Replace it with your own, then export a PNG to assets/icon.png and run: npm run icon -->
+  <rect width="128" height="128" rx="28" fill="#2f3b4c"/>
+  <circle cx="64" cy="64" r="30" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <circle cx="64" cy="64" r="8" fill="#ffffff"/>
+</svg>

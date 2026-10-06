@@ -1,0 +1,48 @@
+{
+  "name": "mcp-tc",
+  "version": "0.1.0",
+  "description": "Command-line tool for mcp.tc, the directory of MCP servers: search listings and add servers to your MCP clients with each vendor's own URL or package. It also helps you build an MCP server and check it the way mcp.tc reads it.",
+  "type": "module",
+  "bin": {
+    "mcp-tc": "bin/mcp-tc.js",
+    "mcptc": "bin/mcp-tc.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "mcp-client",
+    "mcp-directory",
+    "cli",
+    "claude-code",
+    "cursor",
+    "vscode"
+  ],
+  "homepage": "https://mcp.tc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcptc/mcp-tc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcptc/mcp-tc/issues"
+  },
+  "license": "MIT",
+  "author": "mcp.tc",
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

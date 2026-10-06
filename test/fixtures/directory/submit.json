@@ -1,0 +1,116 @@
+{
+  "written": "2026-10-06",
+  "note": "POST /submit in JSON and GET /s/{token}.json, written from mcp.tc's published contract (https://mcp.tc/docs/api#submit) with the site's own English texts, before the endpoint went live. The fake replaces https://mcp.tc with its own base URL, {token} with the token it made, and {slug} and {name} with the listing's.",
+  "accepted": { "ok": true, "state": "queued", "token": "{token}", "status_url": "https://mcp.tc/s/{token}.json", "page": "https://mcp.tc/s/{token}" },
+  "duplicate": { "ok": true, "state": "duplicate", "listing": { "slug": "{slug}", "name": "{name}", "link": "https://mcp.tc/i/{slug}" } },
+  "listings": {
+    "https://mcp.deepwiki.com/mcp": { "slug": "deepwiki", "name": "DeepWiki" }
+  },
+  "default_listing": { "slug": "weather-mcp", "name": "Weather MCP" },
+  "errors": {
+    "invalid_request": { "status": 400, "body": { "ok": false, "error": "invalid_request", "message": "The \"url\" field is missing or not a string." } },
+    "cross_site": {
+      "status": 403,
+      "body": { "ok": false, "error": "cross_site", "message": "Requests from pages on other websites are refused. Send the suggestion from a script, or use the form at https://mcp.tc/submit." }
+    },
+    "not_found": { "status": 404, "body": { "ok": false, "error": "not_found", "message": "Send JSON suggestions to https://mcp.tc/submit (no language prefix)." } },
+    "too_large": { "status": 413, "body": { "ok": false, "error": "too_large", "message": "The request body is over 16 KB. Send only {\"url\": \"…\", \"note\": \"…\"}." } },
+    "empty": { "status": 422, "body": { "ok": false, "error": "empty", "message": "Paste the URL of an MCP server, its GitHub repo or its package page." } },
+    "too_long": { "status": 422, "body": { "ok": false, "error": "too_long", "message": "That URL is too long." } },
+    "invalid_url": { "status": 422, "body": { "ok": false, "error": "invalid_url", "message": "We couldn’t find that website. Check the address and try again." } },
+    "personal_url": {
+      "status": 422,
+      "body": {
+        "ok": false,
+        "error": "personal_url",
+        "message": "This looks like a personal server URL with a key or account ID in it. Send the server’s public URL or its GitHub repo instead, and keep yours private."
+      }
+    },
+    "blocked": { "status": 422, "body": { "ok": false, "error": "blocked", "message": "We can’t accept suggestions from this site." } },
+    "ip_hour": {
+      "status": 429,
+      "headers": { "Retry-After": "1800" },
+      "body": { "ok": false, "error": "rate_limited", "scope": "ip_hour", "retry_after": 1800, "message": "Too many tries. Please wait a while and try again." }
+    },
+    "ip_hour_short": {
+      "status": 429,
+      "headers": { "Retry-After": "20" },
+      "body": { "ok": false, "error": "rate_limited", "scope": "ip_hour", "retry_after": 20, "message": "Too many tries. Please wait a while and try again." }
+    },
+    "ip_day": {
+      "status": 429,
+      "headers": { "Retry-After": "41000" },
+      "body": { "ok": false, "error": "rate_limited", "scope": "ip_day", "retry_after": 41000, "message": "You’ve sent a lot of suggestions today. Please try again tomorrow." }
+    },
+    "global_day": {
+      "status": 429,
+      "headers": { "Retry-After": "30" },
+      "body": { "ok": false, "error": "rate_limited", "scope": "global_day", "retry_after": 30, "message": "We’ve had a lot of suggestions today. Please try again tomorrow." }
+    },
+    "paused": {
+      "status": 503,
+      "headers": { "Retry-After": "3600" },
+      "body": { "ok": false, "error": "paused", "message": "New suggestions are paused right now. Please try again later." }
+    }
+  },
+  "raw": {
+    "nginx_429": {
+      "status": 429,
+      "headers": { "Content-Type": "text/html", "Server": "nginx" },
+      "body": "<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    },
+    "cloudflare_429": {
+      "status": 429,
+      "headers": { "Content-Type": "text/html; charset=UTF-8", "Server": "cloudflare", "cf-ray": "8f00000000000000-FRA", "Retry-After": "120" },
+      "body": "<!DOCTYPE html><html><head><title>Access denied | mcp.tc used Cloudflare to restrict access</title></head><body><h1>Error 1015</h1><p>You are being rate limited</p></body></html>"
+    },
+    "form_page": {
+      "status": 200,
+      "headers": { "Content-Type": "text/html; charset=UTF-8" },
+      "body": "<!doctype html><html lang=\"en\"><title>Submit an MCP Server | mcp.tc</title><form method=\"post\" action=\"/submit\"><input name=\"url\"></form></html>"
+    },
+    "bad_gateway": { "status": 502, "headers": { "Content-Type": "text/html" }, "body": "<html><body>502 Bad Gateway</body></html>" }
+  },
+  "status": {
+    "queued": { "state": "queued", "title": "In the queue", "message": "We’ll check this server in a moment.", "terminal": false },
+    "checking": { "state": "checking", "title": "Checking the server", "message": "Connecting to it and reading what it says about itself.", "terminal": false },
+    "reviewing": { "state": "reviewing", "title": "Writing the listing", "message": "Summarizing what it does and running a few checks.", "terminal": false },
+    "listed": {
+      "state": "listed",
+      "title": "It’s listed",
+      "message": "It’s live in the directory. Copy its link below.",
+      "link": "https://mcp.tc/i/{slug}",
+      "name": "{name}",
+      "display": "mcp.tc/i/{slug}",
+      "terminal": true
+    },
+    "duplicate": {
+      "state": "duplicate",
+      "title": "Already listed",
+      "message": "This server was already in the directory. Here is its link.",
+      "link": "https://mcp.tc/i/{slug}",
+      "name": "{name}",
+      "display": "mcp.tc/i/{slug}",
+      "terminal": true
+    },
+    "pending": {
+      "state": "pending",
+      "title": "Waiting for review",
+      "message": "We found the server. A person reviews it before its link goes live.",
+      "link": "https://mcp.tc/i/{slug}",
+      "name": "{name}",
+      "display": "mcp.tc/i/{slug}",
+      "terminal": true
+    },
+    "rejected": { "state": "rejected", "title": "Not listed", "message": "This server didn’t pass our checks, so it won’t be listed.", "name": "{name}", "terminal": true },
+    "rejected_none": {
+      "state": "rejected",
+      "title": "Not listed",
+      "message": "We couldn’t find a working MCP server at this address. Try the server’s endpoint URL or its GitHub repo.",
+      "terminal": true
+    },
+    "error": { "state": "error", "title": "Something went wrong", "message": "We couldn’t finish checking this server. Please try again later.", "terminal": true },
+    "failed": { "state": "error", "title": "We couldn’t check it", "message": "The server didn’t respond after a few tries. Check the URL and send it again later.", "terminal": true },
+    "missing": { "state": "missing", "title": "Not found", "message": "No submission has this address." }
+  }
+}

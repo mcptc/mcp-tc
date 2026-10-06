@@ -1,0 +1,224 @@
+[
+  {
+    "s": "awesome-copilot",
+    "n": "Awesome Copilot",
+    "v": "Microsoft",
+    "t": "Retrieve GitHub Copilot customization files from the Awesome Copilot repository, such as prompts, instructions and chat modes.",
+    "c": "developer-tools",
+    "k": "local",
+    "a": "none",
+    "g": [
+      "copilot",
+      "github",
+      "dotnet",
+      "docker",
+      "prompts",
+      "samples"
+    ],
+    "i": "/media/icons/awesome-copilot-2d234a71.webp"
+  },
+  {
+    "s": "cloudflare",
+    "n": "Cloudflare API",
+    "v": "Cloudflare",
+    "t": "Search and call the full Cloudflare API (2,500+ endpoints) through a few Code Mode tools, plus Cloudflare docs search.",
+    "c": "cloud-devops",
+    "k": "remote",
+    "a": "oauth",
+    "g": [
+      "cloudflare",
+      "api",
+      "workers",
+      "dns",
+      "code-mode",
+      "oauth"
+    ],
+    "i": "/media/icons/cloudflare-734eed1e.webp",
+    "f": 1
+  },
+  {
+    "s": "deepwiki",
+    "n": "DeepWiki",
+    "v": "Cognition",
+    "t": "Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation.",
+    "c": "docs-knowledge",
+    "k": "remote",
+    "a": "none",
+    "g": [
+      "github",
+      "documentation",
+      "code-search",
+      "repositories",
+      "wiki",
+      "remote"
+    ],
+    "i": "/media/icons/deepwiki-80b7a72d.webp",
+    "f": 1
+  },
+  {
+    "s": "github",
+    "n": "GitHub",
+    "v": "GitHub",
+    "t": "Work with GitHub repos, issues, pull requests, Actions workflows and code search from your AI assistant.",
+    "c": "developer-tools",
+    "k": "remote",
+    "a": "oauth",
+    "g": [
+      "github",
+      "git",
+      "issues",
+      "pull-requests",
+      "actions",
+      "code-search"
+    ],
+    "i": "/media/icons/github-f5654b43.webp",
+    "f": 1
+  },
+  {
+    "s": "gitmcp",
+    "n": "GitMCP",
+    "v": "GitMCP",
+    "t": "Read documentation and search code of any GitHub repository, so answers come from the current source instead of model memory.",
+    "c": "docs-knowledge",
+    "k": "remote",
+    "a": "none",
+    "g": [
+      "github",
+      "documentation",
+      "code-search",
+      "llms-txt",
+      "remote",
+      "open-source"
+    ],
+    "i": "/media/icons/gitmcp-a558794a.webp"
+  },
+  {
+    "s": "grep",
+    "n": "Grep by Vercel",
+    "v": "Vercel",
+    "t": "Search real code across a million public GitHub repositories with literal and regex patterns.",
+    "c": "developer-tools",
+    "k": "remote",
+    "a": "none",
+    "g": [
+      "code-search",
+      "github",
+      "grep",
+      "regex",
+      "open-source",
+      "vercel"
+    ],
+    "i": "/media/icons/grep-8bf57cc0.webp",
+    "f": 1
+  },
+  {
+    "s": "hugging-face",
+    "n": "Hugging Face",
+    "v": "Hugging Face",
+    "t": "Search Hugging Face Hub models, datasets, Spaces and papers, and browse repo files and trending lists from your assistant.",
+    "c": "ai-ml",
+    "k": "remote",
+    "a": "optional",
+    "g": [
+      "huggingface",
+      "models",
+      "datasets",
+      "spaces",
+      "papers",
+      "gradio"
+    ],
+    "f": 1
+  },
+  {
+    "s": "mcp-tc",
+    "n": "mcp.tc",
+    "v": "mcp.tc",
+    "t": "Search the mcp.tc directory from your assistant and get each MCP server's own URL or install command, with setup steps for each client.",
+    "c": "docs-knowledge",
+    "k": "remote",
+    "a": "none",
+    "g": [
+      "directory",
+      "search",
+      "mcp",
+      "remote",
+      "read-only"
+    ],
+    "i": "/media/icons/mcp-tc-364af24c.webp",
+    "f": 1
+  },
+  {
+    "s": "memory",
+    "n": "Memory",
+    "v": "MCP reference servers",
+    "t": "Store and recall persistent memory across sessions using a local knowledge graph.",
+    "c": "ai-ml",
+    "k": "local",
+    "a": "none",
+    "g": [
+      "memory",
+      "knowledge-graph",
+      "persistent",
+      "reference",
+      "stdio"
+    ],
+    "i": "/media/icons/memory-0e174415.webp",
+    "f": 1
+  },
+  {
+    "s": "notion",
+    "n": "Notion",
+    "v": "Notion",
+    "t": "Search, read, create and update pages and databases in your Notion workspace from an MCP client.",
+    "c": "productivity",
+    "k": "remote",
+    "a": "oauth",
+    "g": [
+      "notion",
+      "workspace",
+      "pages",
+      "databases",
+      "notes",
+      "oauth"
+    ],
+    "i": "/media/icons/notion-03c2dc6f.webp",
+    "f": 1
+  },
+  {
+    "s": "ref-tools",
+    "n": "Ref",
+    "v": "Ref",
+    "t": "Search public and private documentation and read pages as markdown while using as few tokens as possible.",
+    "c": "docs-knowledge",
+    "k": "remote",
+    "a": "api_key",
+    "g": [
+      "documentation",
+      "search",
+      "coding-agents",
+      "context",
+      "private-docs",
+      "markdown"
+    ],
+    "i": "/media/icons/ref-tools-d05222a8.webp"
+  },
+  {
+    "s": "stripe",
+    "n": "Stripe",
+    "v": "Stripe",
+    "t": "Work with Stripe customers, products, payments, invoices and subscriptions, and search Stripe docs, from your AI assistant.",
+    "c": "finance-payments",
+    "k": "remote",
+    "a": "oauth",
+    "g": [
+      "stripe",
+      "payments",
+      "invoices",
+      "subscriptions",
+      "billing",
+      "oauth"
+    ],
+    "i": "/media/icons/stripe-053e8943.webp",
+    "f": 1
+  }
+]

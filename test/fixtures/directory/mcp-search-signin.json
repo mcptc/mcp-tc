@@ -1,0 +1,143 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "121 listings match \"search\", auth sign-in, showing the first 8. Call get_server with a slug for the endpoint URL or install command and setup steps.\n- GitHub: Work with GitHub repos, issues, pull requests, Actions workflows and code search from your AI assistant. [slug github; remote, OAuth sign-in; verified] https://mcp.tc/i/github\n- Notion: Search, read, create and update pages and databases in your Notion workspace from an MCP client. [slug notion; remote, OAuth sign-in; verified] https://mcp.tc/i/notion\n- Cloudflare API (Cloudflare): Search and call the full Cloudflare API (2,500+ endpoints) through a few Code Mode tools, plus Cloudflare docs search. [slug cloudflare; remote, OAuth sign-in; verified] https://mcp.tc/i/cloudflare\n- Hugging Face: Search Hugging Face Hub models, datasets, Spaces and papers, and browse repo files and trending lists from your assistant. [slug hugging-face; remote, sign-in optional; verified] https://mcp.tc/i/hugging-face\n- Stripe: Work with Stripe customers, products, payments, invoices and subscriptions, and search Stripe docs, from your AI assistant. [slug stripe; remote, OAuth sign-in; verified] https://mcp.tc/i/stripe\n- FullEnrich: Search B2B contacts, enrich verified emails and phone numbers, and export results as CSV or JSON. [slug fullenrich; remote, OAuth sign-in] https://mcp.tc/i/fullenrich\n- Ref: Search public and private documentation and read pages as markdown while using as few tokens as possible. [slug ref-tools; remote, API key] https://mcp.tc/i/ref-tools\n- Smartsheet: Read and update Smartsheet sheets, search workspaces, and manage folders and discussions in natural language. [slug smartsheet; remote, OAuth sign-in] https://mcp.tc/i/smartsheet\nMore: https://mcp.tc/directory?q=search&s=auth&sort=popular"
+        }
+      ],
+      "structuredContent": {
+        "total": 121,
+        "count": 8,
+        "results": [
+          {
+            "name": "GitHub",
+            "slug": "github",
+            "link": "https://mcp.tc/i/github",
+            "vendor": "GitHub",
+            "tagline": "Work with GitHub repos, issues, pull requests, Actions workflows and code search from your AI assistant.",
+            "category": "developer-tools",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "Notion",
+            "slug": "notion",
+            "link": "https://mcp.tc/i/notion",
+            "vendor": "Notion",
+            "tagline": "Search, read, create and update pages and databases in your Notion workspace from an MCP client.",
+            "category": "productivity",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "Cloudflare API",
+            "slug": "cloudflare",
+            "link": "https://mcp.tc/i/cloudflare",
+            "vendor": "Cloudflare",
+            "tagline": "Search and call the full Cloudflare API (2,500+ endpoints) through a few Code Mode tools, plus Cloudflare docs search.",
+            "category": "cloud-devops",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "Hugging Face",
+            "slug": "hugging-face",
+            "link": "https://mcp.tc/i/hugging-face",
+            "vendor": "Hugging Face",
+            "tagline": "Search Hugging Face Hub models, datasets, Spaces and papers, and browse repo files and trending lists from your assistant.",
+            "category": "ai-ml",
+            "auth": "optional",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "Stripe",
+            "slug": "stripe",
+            "link": "https://mcp.tc/i/stripe",
+            "vendor": "Stripe",
+            "tagline": "Work with Stripe customers, products, payments, invoices and subscriptions, and search Stripe docs, from your AI assistant.",
+            "category": "finance-payments",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": true
+          },
+          {
+            "name": "FullEnrich",
+            "slug": "fullenrich",
+            "link": "https://mcp.tc/i/fullenrich",
+            "vendor": "FullEnrich",
+            "tagline": "Search B2B contacts, enrich verified emails and phone numbers, and export results as CSV or JSON.",
+            "category": "crm-sales",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": false
+          },
+          {
+            "name": "Ref",
+            "slug": "ref-tools",
+            "link": "https://mcp.tc/i/ref-tools",
+            "vendor": "Ref",
+            "tagline": "Search public and private documentation and read pages as markdown while using as few tokens as possible.",
+            "category": "docs-knowledge",
+            "auth": "api_key",
+            "kind": "remote",
+            "verified": false
+          },
+          {
+            "name": "Smartsheet",
+            "slug": "smartsheet",
+            "link": "https://mcp.tc/i/smartsheet",
+            "vendor": "Smartsheet",
+            "tagline": "Read and update Smartsheet sheets, search workspaces, and manage folders and discussions in natural language.",
+            "category": "productivity",
+            "auth": "oauth",
+            "kind": "remote",
+            "verified": false
+          }
+        ],
+        "more_url": "https://mcp.tc/directory?q=search&s=auth&sort=popular"
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.0.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

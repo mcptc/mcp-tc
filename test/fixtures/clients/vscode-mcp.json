@@ -1,0 +1,18 @@
+{
+  // VS Code writes comments into this file
+  "servers": {
+    "fetch": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-fetch==2025.4.7"],
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ${input:github_token}" }
+    }
+  },
+  "inputs": [
+    { "type": "promptString", "id": "github_token", "description": "GitHub token", "password": true }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "status": 200,
+  "body": {
+    "slug": "deepwiki",
+    "name": "DeepWiki",
+    "vendor": "Cognition",
+    "tagline": "Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation.",
+    "description": "DeepWiki connects your assistant to AI-generated documentation for public GitHub repositories. You can list a repository's documentation topics, read the full wiki contents, and ask questions about the codebase, with answers grounded in its wiki.\n\nIt runs as a hosted remote server at https://mcp.deepwiki.com/mcp using streamable HTTP. A legacy SSE endpoint exists at /sse but is being deprecated. No sign-in or API key is needed for public repositories.",
+    "link": "https://mcp.tc/i/deepwiki",
+    "lang": "en",
+    "text_lang": "en",
+    "category": "docs-knowledge",
+    "category_name": "Docs & Knowledge",
+    "kind": "remote",
+    "transport": "streamable-http",
+    "auth": "none",
+    "access": {
+      "group": "ok",
+      "label": "No sign-in",
+      "text": "No sign-in",
+      "note": "No account or key needed"
+    },
+    "endpoint": "https://mcp.deepwiki.com/mcp",
+    "install_command": null,
+    "package": null,
+    "relay": false,
+    "verified": true,
+    "verified_by": "Verified by mcp.tc: official server from Cognition",
+    "icon": "https://mcp.tc/media/icons/deepwiki-80b7a72d.webp",
+    "tools_count": 3,
+    "tools": [
+      {
+        "name": "ask_wiki_question",
+        "summary": "Ask a question about a GitHub repository and get an answer grounded in its DeepWiki.",
+        "read_only": null,
+        "destructive": null
+      },
+      {
+        "name": "read_wiki_contents",
+        "summary": "View documentation about a GitHub repository.",
+        "read_only": null,
+        "destructive": null
+      },
+      {
+        "name": "read_wiki_structure",
+        "summary": "Get a list of documentation topics for a GitHub repository.",
+        "read_only": null,
+        "destructive": null
+      }
+    ],
+    "add": [
+      {
+        "client": "claude-code",
+        "label": "Claude Code",
+        "kind": "copy",
+        "value": "claude mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp"
+      },
+      {
+        "client": "cursor",
+        "label": "Cursor",
+        "kind": "link",
+        "value": "https://cursor.com/install-mcp?name=deepwiki&config=eyJ1cmwiOiJodHRwczovL21jcC5kZWVwd2lraS5jb20vbWNwIn0%3D"
+      },
+      {
+        "client": "vscode",
+        "label": "VS Code",
+        "kind": "link",
+        "value": "https://vscode.dev/redirect/mcp/install?name=deepwiki&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.deepwiki.com%2Fmcp%22%7D"
+      },
+      {
+        "client": "claude-ai",
+        "label": "claude.ai",
+        "kind": "link",
+        "value": "https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=DeepWiki&connectorUrl=https%3A%2F%2Fmcp.deepwiki.com%2Fmcp"
+      }
+    ],
+    "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+    "repository": null,
+    "docs": null,
+    "health": "ok",
+    "last_checked": "2026-10-05T22:43:54Z",
+    "listed": "2026-10-03T14:40:15Z",
+    "updated": "2026-10-04T00:59:09Z",
+    "embeds": {
+      "badge": "https://mcp.tc/i/deepwiki/badge.svg",
+      "widget": "https://mcp.tc/w/deepwiki.js",
+      "iframe": "https://mcp.tc/embed/deepwiki",
+      "markdown": "https://mcp.tc/i/deepwiki.md"
+    },
+    "format": "https://mcp.tc/embed#json"
+  }
+}

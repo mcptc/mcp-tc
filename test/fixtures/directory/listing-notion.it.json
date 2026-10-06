@@ -1,0 +1,73 @@
+{
+  "status": 200,
+  "body": {
+    "slug": "notion",
+    "name": "Notion",
+    "vendor": "Notion",
+    "tagline": "Cerca, leggi, crea e aggiorna pagine e database nel tuo workspace Notion da un client MCP.",
+    "description": "Collega un client MCP come Claude Code, Cursor o Codex al tuo workspace Notion. Il client può cercare contenuti in Notion e nelle fonti collegate, leggere pagine, creare e aggiornare contenuti, e creare pagine e database. Agisce sui contenuti a cui l’utente che ha effettuato l’accesso può accedere.\n\nÈ ospitato da Notion come server remoto tramite Streamable HTTP all’indirizzo https://mcp.notion.com/mcp, con un endpoint SSE legacy su /sse. L’accesso avviene tramite OAuth. I proprietari del workspace possono gestire l’accesso dei client MCP in Settings, Connections.",
+    "link": "https://mcp.tc/it/i/notion",
+    "lang": "it",
+    "text_lang": "it",
+    "category": "productivity",
+    "category_name": "Produttività e progetti",
+    "kind": "remote",
+    "transport": "streamable-http",
+    "auth": "oauth",
+    "access": {
+      "group": "auth",
+      "label": "Accesso richiesto",
+      "text": "Accesso con OAuth",
+      "note": "La prima volta che ti colleghi, accedi con il tuo account del fornitore"
+    },
+    "endpoint": "https://mcp.notion.com/mcp",
+    "install_command": null,
+    "package": null,
+    "relay": false,
+    "verified": true,
+    "verified_by": "Verificato da mcp.tc: server ufficiale di Notion",
+    "icon": "https://mcp.tc/media/icons/notion-03c2dc6f.webp",
+    "tools_count": 0,
+    "tools": [],
+    "add": [
+      {
+        "client": "claude-code",
+        "label": "Claude Code",
+        "kind": "copy",
+        "value": "claude mcp add --transport http notion https://mcp.notion.com/mcp"
+      },
+      {
+        "client": "cursor",
+        "label": "Cursor",
+        "kind": "link",
+        "value": "https://cursor.com/install-mcp?name=notion&config=eyJ1cmwiOiJodHRwczovL21jcC5ub3Rpb24uY29tL21jcCJ9"
+      },
+      {
+        "client": "vscode",
+        "label": "VS Code",
+        "kind": "link",
+        "value": "https://vscode.dev/redirect/mcp/install?name=notion&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.notion.com%2Fmcp%22%7D"
+      },
+      {
+        "client": "claude-ai",
+        "label": "claude.ai",
+        "kind": "link",
+        "value": "https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Notion&connectorUrl=https%3A%2F%2Fmcp.notion.com%2Fmcp"
+      }
+    ],
+    "homepage": "https://developers.notion.com/guides/mcp/overview",
+    "repository": null,
+    "docs": null,
+    "health": "auth",
+    "last_checked": "2026-10-05T22:44:03Z",
+    "listed": "2026-10-03T14:41:27Z",
+    "updated": "2026-10-03T23:54:43Z",
+    "embeds": {
+      "badge": "https://mcp.tc/i/notion/badge.svg",
+      "widget": "https://mcp.tc/w/notion.js?lang=it",
+      "iframe": "https://mcp.tc/embed/notion?lang=it",
+      "markdown": "https://mcp.tc/i/notion.md"
+    },
+    "format": "https://mcp.tc/it/embed#json"
+  }
+}

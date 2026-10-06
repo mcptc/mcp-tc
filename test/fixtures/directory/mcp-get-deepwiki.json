@@ -1,0 +1,243 @@
+{
+  "status": 200,
+  "message": {
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "DeepWiki: Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation.\nBy Cognition. Docs & Knowledge. Verified by mcp.tc: official server from Cognition.\nListing page: https://mcp.tc/i/deepwiki\nServer URL (connect to this): https://mcp.deepwiki.com/mcp\nAccess: No sign-in: add the server URL to any client that supports remote MCP servers.\nDeepWiki connects your assistant to AI-generated documentation for public GitHub repositories. You can list a repository's documentation topics, read the full wiki contents, and ask questions about the codebase, with answers grounded in its wiki. It runs as a hosted remote server at https://mcp.deepwiki.com/mcp using streamable HTTP. A legacy SSE endpoint exists at /sse but is being deprecated. No sign-in or API key is needed for public repositories.\nTools (3): ask_wiki_question, read_wiki_contents, read_wiki_structure\nSetup (call get_server with client=<id> for the full steps):\n- Claude Code (claude-code): `claude mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp`\n- Claude Desktop (claude-desktop): Open Customize → Connectors, click + Add, then Add custom connector, URL https://mcp.deepwiki.com/mcp\n- claude.ai (claude-ai): Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=DeepWiki&connectorUrl=https%3A%2F%2Fmcp.deepwiki.com%2Fmcp\n- ChatGPT (chatgpt): see client=chatgpt\n- Cursor (cursor): Add to Cursor: https://cursor.com/install-mcp?name=deepwiki&config=eyJ1cmwiOiJodHRwczovL21jcC5kZWVwd2lraS5jb20vbWNwIn0%3D\n- VS Code (vscode): `code --add-mcp '{\"name\":\"deepwiki\",\"type\":\"http\",\"url\":\"https://mcp.deepwiki.com/mcp\"}'`\n- Devin Desktop (devin): see client=devin\n- Codex (codex): `codex mcp add deepwiki --url https://mcp.deepwiki.com/mcp`\n- Gemini CLI (gemini): `gemini mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp`\n- Any client (json): see client=json"
+        }
+      ],
+      "structuredContent": {
+        "name": "DeepWiki",
+        "slug": "deepwiki",
+        "link": "https://mcp.tc/i/deepwiki",
+        "vendor": "Cognition",
+        "tagline": "Ask questions about any public GitHub repository and read its AI-generated DeepWiki documentation.",
+        "description": "DeepWiki connects your assistant to AI-generated documentation for public GitHub repositories. You can list a repository's documentation topics, read the full wiki contents, and ask questions about the codebase, with answers grounded in its wiki. It runs as a hosted remote server at https://mcp.deepwiki.com/mcp using streamable HTTP. A legacy SSE endpoint exists at /sse but is being deprecated. No sign-in or API key is needed for public repositories.",
+        "category": "docs-knowledge",
+        "category_name": "Docs & Knowledge",
+        "kind": "remote",
+        "auth": "none",
+        "auth_note": "No sign-in: add the server URL to any client that supports remote MCP servers.",
+        "transport": "streamable-http",
+        "endpoint": "https://mcp.deepwiki.com/mcp",
+        "install_command": null,
+        "package": null,
+        "env_vars": [],
+        "headers": [],
+        "tools_count": 3,
+        "tools": [
+          {
+            "name": "ask_wiki_question",
+            "summary": "Ask a question about a GitHub repository and get an answer grounded in its DeepWiki.",
+            "read_only": null,
+            "destructive": null
+          },
+          {
+            "name": "read_wiki_contents",
+            "summary": "View documentation about a GitHub repository.",
+            "read_only": null,
+            "destructive": null
+          },
+          {
+            "name": "read_wiki_structure",
+            "summary": "Get a list of documentation topics for a GitHub repository.",
+            "read_only": null,
+            "destructive": null
+          }
+        ],
+        "capabilities": [
+          "List documentation topics for a GitHub repository",
+          "Read the full generated wiki of a repository",
+          "Ask questions about a repository's codebase",
+          "Get answers grounded in the repository's DeepWiki"
+        ],
+        "example_prompts": [
+          "Show the DeepWiki documentation topics for facebook/react.",
+          "Ask DeepWiki how routing works in vercel/next.js.",
+          "Read the DeepWiki contents for modelcontextprotocol/typescript-sdk.",
+          "Explain the architecture of langchain-ai/langchain using DeepWiki."
+        ],
+        "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+        "repository": null,
+        "docs": null,
+        "verified": true,
+        "verified_by": "Verified by mcp.tc: official server from Cognition",
+        "health": "ok",
+        "last_checked": "2026-10-05T22:43:54Z",
+        "server_version": "2.14.3",
+        "setup": [
+          {
+            "client": "claude-code",
+            "label": "Claude Code",
+            "quick": "`claude mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp`",
+            "steps": [
+              "Run this in a terminal, in your project folder:",
+              "```bash\nclaude mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp\n```",
+              "Start Claude Code and type `/mcp`. **deepwiki** should show as connected."
+            ],
+            "code": "claude mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp",
+            "link": null,
+            "note": "Add `--scope user` to make it available in every project, not just this one."
+          },
+          {
+            "client": "claude-desktop",
+            "label": "Claude Desktop",
+            "quick": "Open Customize → Connectors, click + Add, then Add custom connector, URL https://mcp.deepwiki.com/mcp",
+            "steps": [
+              "Open **Customize → Connectors**, click **+ Add**, then **Add custom connector**.",
+              "Name it **DeepWiki** and paste this URL:",
+              "https://mcp.deepwiki.com/mcp",
+              "Click **Add**. Its tools appear in the chat’s tools menu."
+            ],
+            "code": "https://mcp.deepwiki.com/mcp",
+            "link": null,
+            "note": "Claude Desktop’s JSON config file only starts local servers. Remote servers go through Connectors, and connectors you add on claude.ai show up here too."
+          },
+          {
+            "client": "claude-ai",
+            "label": "claude.ai",
+            "quick": "Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=DeepWiki&connectorUrl=https%3A%2F%2Fmcp.deepwiki.com%2Fmcp",
+            "steps": [
+              "Open the connector form on claude.ai. This button fills in the name and URL for you:",
+              "Add to claude.ai: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=DeepWiki&connectorUrl=https%3A%2F%2Fmcp.deepwiki.com%2Fmcp",
+              "Check that the URL reads `https://mcp.deepwiki.com/mcp` and click **Add**.",
+              "Turn it on in a chat from the tools menu."
+            ],
+            "code": null,
+            "link": "https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=DeepWiki&connectorUrl=https%3A%2F%2Fmcp.deepwiki.com%2Fmcp",
+            "note": "Free plans allow one custom connector. On Team and Enterprise plans an owner adds it under **Organization settings → Connectors**."
+          },
+          {
+            "client": "chatgpt",
+            "label": "ChatGPT",
+            "quick": null,
+            "steps": [
+              "On chatgpt.com, open **Settings → Security and login** and turn on **Developer mode**.",
+              "Go to `chatgpt.com/plugins` and click **+** to create an app for a remote MCP server.",
+              "Paste `https://mcp.deepwiki.com/mcp` as the server URL and choose **No authentication**."
+            ],
+            "code": null,
+            "link": null,
+            "note": "Developer mode is available on the web for Plus, Pro, Business, Enterprise and Education accounts."
+          },
+          {
+            "client": "cursor",
+            "label": "Cursor",
+            "quick": "Add to Cursor: https://cursor.com/install-mcp?name=deepwiki&config=eyJ1cmwiOiJodHRwczovL21jcC5kZWVwd2lraS5jb20vbWNwIn0%3D",
+            "steps": [
+              "Add to Cursor: https://cursor.com/install-mcp?name=deepwiki&config=eyJ1cmwiOiJodHRwczovL21jcC5kZWVwd2lraS5jb20vbWNwIn0%3D",
+              "Or add it by hand to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (this project):",
+              "```json\n{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"url\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}\n```"
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"url\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}",
+            "link": "https://cursor.com/install-mcp?name=deepwiki&config=eyJ1cmwiOiJodHRwczovL21jcC5kZWVwd2lraS5jb20vbWNwIn0%3D",
+            "note": null
+          },
+          {
+            "client": "vscode",
+            "label": "VS Code",
+            "quick": "`code --add-mcp '{\"name\":\"deepwiki\",\"type\":\"http\",\"url\":\"https://mcp.deepwiki.com/mcp\"}'`",
+            "steps": [
+              "Install in VS Code: https://vscode.dev/redirect/mcp/install?name=deepwiki&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.deepwiki.com%2Fmcp%22%7D",
+              "Or from a terminal:",
+              "```bash\ncode --add-mcp '{\"name\":\"deepwiki\",\"type\":\"http\",\"url\":\"https://mcp.deepwiki.com/mcp\"}'\n```",
+              "Or commit it to the repo in `.vscode/mcp.json`:",
+              "```json\n{\n  \"servers\": {\n    \"deepwiki\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}\n```"
+            ],
+            "code": "code --add-mcp '{\"name\":\"deepwiki\",\"type\":\"http\",\"url\":\"https://mcp.deepwiki.com/mcp\"}'",
+            "link": "https://vscode.dev/redirect/mcp/install?name=deepwiki&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.deepwiki.com%2Fmcp%22%7D",
+            "note": null
+          },
+          {
+            "client": "devin",
+            "label": "Devin Desktop",
+            "quick": null,
+            "steps": [
+              "Add it to `~/.config/devin/mcp_config.json` (macOS and Linux) or `%APPDATA%\\devin\\mcp_config.json` (Windows):",
+              "```json\n{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"serverUrl\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}\n```",
+              "Refresh the MCP server list in Cascade."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"serverUrl\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}",
+            "link": null,
+            "note": "Devin Desktop is the new name for Windsurf. It reads `serverUrl` (or `url`) for remote servers."
+          },
+          {
+            "client": "codex",
+            "label": "Codex",
+            "quick": "`codex mcp add deepwiki --url https://mcp.deepwiki.com/mcp`",
+            "steps": [
+              "```bash\ncodex mcp add deepwiki --url https://mcp.deepwiki.com/mcp\n```",
+              "Or edit `~/.codex/config.toml` directly:",
+              "```toml\n[mcp_servers.deepwiki]\nurl = \"https://mcp.deepwiki.com/mcp\"\n```"
+            ],
+            "code": "codex mcp add deepwiki --url https://mcp.deepwiki.com/mcp",
+            "link": null,
+            "note": null
+          },
+          {
+            "client": "gemini",
+            "label": "Gemini CLI",
+            "quick": "`gemini mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp`",
+            "steps": [
+              "```bash\ngemini mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp\n```"
+            ],
+            "code": "gemini mcp add --transport http deepwiki https://mcp.deepwiki.com/mcp",
+            "link": null,
+            "note": "This adds it to the current project. Add `-s user` to use it everywhere."
+          },
+          {
+            "client": "json",
+            "label": "Any client",
+            "quick": null,
+            "steps": [
+              "Most clients accept this shape. Some name the URL field differently: `serverUrl` in Devin Desktop, `httpUrl` in Gemini CLI’s settings file.",
+              "```json\n{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}\n```",
+              "Zed puts servers under `context_servers` in its settings. Cline needs `\"type\": \"streamableHttp\"`, or it assumes SSE.",
+              "Client only starts local servers? Bridge it with `npx -y mcp-remote https://mcp.deepwiki.com/mcp`."
+            ],
+            "code": "{\n  \"mcpServers\": {\n    \"deepwiki\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.deepwiki.com/mcp\"\n    }\n  }\n}",
+            "link": null,
+            "note": null
+          }
+        ]
+      },
+      "isError": false,
+      "resultType": "complete",
+      "_meta": {
+        "io.modelcontextprotocol/serverInfo": {
+          "name": "mcp.tc",
+          "title": "mcp.tc directory",
+          "version": "1.0.0",
+          "description": "Search the mcp.tc directory of MCP servers: endpoints, install commands and setup steps per client.",
+          "websiteUrl": "https://mcp.tc",
+          "icons": [
+            {
+              "src": "https://mcp.tc/icon-192.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "192x192"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/icon-512.png",
+              "mimeType": "image/png",
+              "sizes": [
+                "512x512"
+              ]
+            },
+            {
+              "src": "https://mcp.tc/favicon.svg",
+              "mimeType": "image/svg+xml",
+              "sizes": [
+                "any"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

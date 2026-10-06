@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "notion": { "url": "https://mcp.notion.com/mcp" },
+    "bridge": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.example.com/mcp?token=FAKEBRIDGETOKEN", "--header", "Authorization: Bearer FAKE-bridge-secret-0987654321"]
+    },
+    "local-dev": { "url": "http://localhost:8787/mcp" },
+    "script": { "command": "node", "args": ["/home/someone/dev/server.js", "--api-key", "FAKE-script-key-5555555555"] }
+  }
+}

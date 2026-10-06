@@ -1,0 +1,9 @@
+{
+  "theme": "Default",
+  /* Gemini CLI settings may have comments */
+  "mcpServers": {
+    "sse-server": { "url": "https://sse.example.com/sse" },
+    "stream": { "httpUrl": "https://mcp.deepwiki.com/mcp", "headers": { "X-Api-Key": "FAKE-gemini-key-2222222222" } },
+    "pkg": { "command": "uvx", "args": ["--from", "git+https://github.com/example-org/example-mcp@v1.2.0", "example-mcp"] }
+  }
+}

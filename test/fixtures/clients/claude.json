@@ -1,0 +1,31 @@
+{
+  "numStartups": 12,
+  "mcpServers": {
+    "deepwiki": {
+      "type": "http",
+      "url": "https://mcp.deepwiki.com/mcp"
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory@2025.9.25"],
+      "env": { "MEMORY_FILE_PATH": "/home/someone/private/memory.json" }
+    }
+  },
+  "projects": {
+    "{{CWD}}": {
+      "mcpServers": {
+        "keyed": {
+          "type": "http",
+          "url": "https://user:FAKEPASSWORD123@api.example.org/v1/mcp?api_key=FAKEQUERYKEY999",
+          "headers": { "Authorization": "Bearer FAKE-sk-header-token-1234567890" }
+        }
+      }
+    },
+    "/some/other/project": {
+      "mcpServers": {
+        "elsewhere": { "type": "http", "url": "https://elsewhere.example.net/mcp" }
+      }
+    }
+  }
+}
