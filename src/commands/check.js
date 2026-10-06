@@ -273,7 +273,7 @@ function serverInfoFindings(r, f) {
   if (s.name && s.version) f.ok('server_info', `serverInfo: ${s.name} ${s.version}.`);
   const missing = /** @type {string[]} */ ([!s.title && 'title', !s.description && 'description', !s.websiteUrl && 'websiteUrl', !s.icons.length && 'icons'].filter(Boolean));
   if (missing.length) {
-    f.suggest('server_info_fields', `Add ${and(missing)} to serverInfo. mcp.tc uses them for the listing, and clients show the title and icon.`);
+    f.suggest('server_info_fields', `Add ${and(missing)} to serverInfo. mcp.tc uses ${missing.length === 1 ? 'it' : 'them'} for the listing, and clients show the title and icon.`);
   }
   if (s.icons.length) {
     const kind = (/** @type {{src: string, mimeType: string}} */ i) => (i.mimeType || i.src).toLowerCase();
