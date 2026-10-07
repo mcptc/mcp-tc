@@ -117,7 +117,7 @@ describe('mcp-tc info', () => {
     });
     const t = renderText(d);
     assert.match(t, /^History\s+https:\/\/mcp\.tc\/i\/deepwiki#history$/m);
-    assert.match(t, /^Tracked\s+Tool list, version and listing edits$/m);
+    assert.match(t, /^Tracked\s+Tool list, version and owner edits$/m);
     assert.match(t, /^Tools read\s+2026-10-06 09:00 UTC$/m);
     assert.match(t, /^Last change\s+2026-10-01 12:30 UTC$/m);
     assert.match(t, /^Recent changes$/m);

@@ -40,9 +40,9 @@ const HEALTH = {
 };
 
 const TRACKING = {
-  tools: 'Tool list, version and listing edits',
-  version: 'Version and listing edits',
-  listing: 'Listing edits',
+  tools: 'Tool list, version and owner edits',
+  version: 'Version and owner edits',
+  listing: 'Owner edits',
 };
 
 /**
