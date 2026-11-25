@@ -1,6 +1,6 @@
 # mcp-tc
 
-[![mcptc/mcp-tc MCP server](https://glama.ai/mcp/servers/tc.mcp/mcptc-directory/badges/score.svg)](https://glama.ai/mcp/servers/tc.mcp/mcptc-directory)
+[![mcptc/mcp-tc MCP server](https://glama.ai/mcp/connectors/tc.mcp/mcptc-directory/badges/score.svg)](https://glama.ai/mcp/connectors/tc.mcp/mcptc-directory)
 
 mcp-tc is the command-line tool for [mcp.tc](https://mcp.tc), a directory of MCP servers. It finds servers in the
 directory and adds them to your MCP clients with each vendor's own URL or package, and it helps you build an MCP server
